@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <script src="https://kit.fontawesome.com/3ff5f3edd5.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="2.ico" type="image/x-icon">
+    <style>
+        #foto {
+            height: 300px;
+            width: 300px;
+            border-radius: 150px;
+            background-size: cover;
+            background-position: 50%;
+            margin: 20px;
+            position: relative;
+            transform: scaleX(-1);
+            margin-left: 150px;
+
+        }
+
+        #camera {
+            width: 640px;
+            margin: 20px;
+            transform: scaleX(-1);
+            background-image: url(pngtree-mbe-icon-camera-image_1440686-removebg-preview.png);
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(decoracao3.png);
+            background-size: cover;
+            pointer-events: none;
+            border-radius: 150px;
+        }
+
+        /* Fontes */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        /* CSS Geral */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+        }
+
+        #header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            height: 100px;
+            flex-shrink: 0;
+        }
+
+        .container {
+            max-width: 1341px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 84px;
+            height: 90px;
+            flex-shrink: 0;
+        }
+
+        .search form {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .search input {
+            width: 523px;
+            height: 34px;
+            border: 1px solid #ffffff;
+            background: #FCF5ED;
+            border-radius: 10px;
+            margin-right: 250px;
+        }
+
+        .search button {
+            position: absolute;
+            right: 252px;
+            background-color: transparent;
+            border: none;
+            color: #000000;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu a {
+            color: #666;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .menu a:hover {
+            color: #ff8d66;
+        }
+
+        .botoes button {
+            width: 145px;
+            height: 35px;
+            flex-shrink: 0;
+            background-color: #F69100;
+            color: white;
+            border-radius: 20px;
+            font-family: 'Open Sans';
+            border: none;
+        }
+
+       
+
+        .linha {
+            width: 2.893px;
+            height: 234px;
+            flex-shrink: 0;
+            background: #F69100;
+        }
+
+        .titulo {
+            color: #000;
+            font-family: 'Open Sans';
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        .texto {
+            color: #5F6368;
+            font-family: 'Open Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .quadrado1 {
+            width: 50%;
+            display: flex;
+            justify-content: left;
+        }
+
+        .botao button {
+            padding: 15px;
+            flex-shrink: 0;
+            background-color: #F69100;
+            color: white;
+            border-radius: 30px;
+            font-family: 'Open Sans';
+            border: none;
+        }
+        .botao {
+            margin: 40px;
+        }
+
+        .textos {
+            margin: 25px;
+        }
+
+        .container1 {
+            display: flex;
+            margin: 50px;
+            height: 456.342px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quadrado2 {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fotos {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.jpg" alt="">
+            </div>
+
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Pesquisar">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <nav class="menu">
+                <a href="">TEMPLATES</a>
+                <a href="">INICIO</a>
+                <div>
+                    <a href=""><i class="fa-light fa-heart" style="color: #ff8d66;"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="fa-light fa-box" style="color: #ff8d66;"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="fa-solid fa-user" style="color: #ff8d66;"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container1">
+        <div class="quadrado1">
+            <div class="linha"></div>
+            <div class="textos">
+                <div class="titulo">Faça parte do mural de fotos natalinas do STUDIO 5.</div>
+                <div class="texto">Com as festas de final de ano se aproximando, a equipe Studio 5 fará um grande mural
+                    de fotos para relembrarmos dos nossos queridos clientes.Tire sua foto e faça parte do mural! A
+                    equipe Studio 5 deseja boas festas e um ótimo ano.</div>
+                <br>
+
+            </div>
+        </div>
+        <div class="quadrado2">
+            <img src="foto-removebg-preview.png" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="camera1">
+            <video id="camera" autoplay></video>
+        </div>
+        <div class="fotos">
+            <div id="foto">
+                <div class="overlay"></div>
+            </div>
+            <div class="botao">
+                <button onclick="abrirCamera()">Abrir Câmera</button>
+                <button onclick="tirarFoto()">Tirar Foto</button>
+                <button onclick="recarregarFoto()">Tirar Foto Novamente</button>
+                <button onclick="fechar()">Fechar Câmera</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var mediaStream;
+        var downloadLink = document.createElement('a');
+
+        function abrirCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
+                mediaStream = stream;
+                const areaVideo = document.getElementById('camera');
+                areaVideo.srcObject = stream;
+            }).catch(function (error) {
+                console.error('Erro ao acessar a câmera:', error);
+            });
+        }
+
+        function tirarFoto() {
+            const areaVideo = document.getElementById('camera');
+            const canvas = document.createElement('canvas');
+            canvas.width = areaVideo.videoWidth;
+            canvas.height = areaVideo.videoHeight;
+            const context = canvas.getContext('2d');
+            context.drawImage(areaVideo, 0, 0, canvas.width, canvas.height);
+            const imageDataURL = canvas.toDataURL();
+            const fotoDiv = document.getElementById('foto');
+            fotoDiv.style.backgroundImage = `url(${imageDataURL})`;
+            downloadLink.href = imageDataURL;
+            downloadLink.download = 'foto.png';
+            downloadLink.textContent = 'Clique para baixar';
+            document.body.appendChild(downloadLink);
+        }
+
+        function recarregarFoto() {
+            const fotoDiv = document.getElementById('foto');
+            fotoDiv.style.backgroundImage = 'none';
+        }
+
+        function fechar() {
+            if (mediaStream) {
+                mediaStream.getTracks().forEach(track => track.stop());
+                const areaVideo = document.getElementById('camera');
+                areaVideo.srcObject = null;
+                mediaStream = null;
+            }
+        }
+    </script>
+</body>
+
+</html>
